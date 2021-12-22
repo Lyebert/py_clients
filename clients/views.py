@@ -14,8 +14,26 @@ def inserir_cliente(request):
         form = ClienteForm(request.POST)
         if form.is_valid():
             form.save()
+        else:
+            form = ClienteForm()
     form = ClienteForm()
     return render(request, 'clientes/form_cliente.html', {'form': form})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

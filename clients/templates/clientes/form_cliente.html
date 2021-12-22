@@ -8,24 +8,29 @@
     <form method="post">
         {% csrf_token %}
         <div>
+            {{ form.nome.errors }}
             <label>Nome: </label>
             {{ form.nome }}
         </div>
         <div>
+            {{ form.sexo.errors }}
             <label>Sexo: </label>
-        {{ form.sexo }}
+            {{ form.sexo }}
         </div>
         <div>
+            {{ form.data_nascimento }}
             <label>Data de nascimento: </label>
-        {{ form.data_nascimento }}
+            {{ form.data_nascimento }}
         </div>
         <div>
+            {{ form.email.errors }}
             <label>Email: </label>
-        {{ form.email }}
+            {{ form.email }}
         </div>
         <div>
-        <label>Profissão: </label>
-        {{ form.profissao }}
+            {{ form.profissao.errors }}
+            <label>Profissão: </label>
+            {{ form.profissao }}
         </div>
         <div>
             <input type="submit" name="Cadastrar">
