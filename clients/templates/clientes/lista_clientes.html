@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-</head>
-<body>
-<main class="container">
+{% extends "clientes/base.html" %}
+
+{% block titulo %}
+Lista - Clientes
+{% endblock titulo %}
+
+{% block conteudo %}
     <table class="table">
         <thead>
         <tr>
@@ -26,6 +24,4 @@
         </tbody>
     </table>
     <a href="{% url 'cadastrar_cliente' %}"><button class="btn btn-primary">Cadastrar</button></a>
-</main>
-</body>
-</html>
+{% endblock conteudo %}
